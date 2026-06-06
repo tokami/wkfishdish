@@ -1,8 +1,11 @@
 # Gear efficiency: TVL vs. TVS for plaice in the Baltic
 
+
 ## Methodological challenge
 
-Survey data are often collected using multiple vessels and gear types. Differences in gear efficiency can introduce systematic biases into abundance indices, species distribution models, and trend analyses.
+Survey data are often collected using multiple vessels and gear types.
+Differences in gear efficiency can introduce systematic biases into abundance
+indices, species distribution models, and trend analyses.
 
 In this dataset, all observations originate from the same survey but two
 different gears: a large TV trawl (TVL) and a small TV trawl (TVS) (Fig. 1).
@@ -39,20 +42,28 @@ question. Specific questions could be:
 
 ## Key variables
 
-| Variable   | Description                       |
-|------------|-----------------------------------|
-| year       | Survey year                       |
-| quarter    | Survey quarter                    |
-| haul_id    | Unique haul identifier            |
-| gear       | Beam trawl gear identifier        |
-| vessel     | Survey vessel                     |
-| lon        | Haul longitude                    |
-| lat        | Haul latitude                     |
-| depth      | Haul depth (m)                    |
-| swept_area | Estimated swept area              |
-| length     | Length group                      |
-| numbers    | Number caught in the length class |
-| weight     | Total weight in the length class  |
+| Variable     | Unit             | Description                                                                               |
+|--------------|------------------|-------------------------------------------------------------------------------------------|
+| haul.id      | —                | Unique identifier for each survey haul. Repeated across length groups from the same haul. |
+| Survey       | —                | DATRAS survey programme identifier, e.g. `BITS`.                                          |
+| Gear         | —                | Survey gear identifier, e.g. `TVL`.                                                       |
+| Country      | —                | Country code for the institute or vessel conducting the haul.                             |
+| Ship         | —                | Survey vessel code.                                                                       |
+| Year         | year             | Year in which the haul was conducted.                                                     |
+| Quarter      | quarter          | Calendar quarter of the survey, from 1 to 4.                                              |
+| Month        | month            | Calendar month of the haul, from 1 to 12.                                                 |
+| Day          | day              | Day of month on which the haul was conducted.                                             |
+| lon          | decimal degrees  | Haul longitude in WGS84.                                                                  |
+| lat          | decimal degrees  | Haul latitude in WGS84.                                                                   |
+| timeOfYear   | fraction of year | Within-year timing of the haul, expressed as fraction of the year.                        |
+| abstime      | year             | Continuous decimal-year time variable, approximately `Year + timeOfYear`.                 |
+| DayNight     | —                | Day/night category of the haul; `D` = day, `N` = night.                                   |
+| TimeShotHour | hour of day      | Haul start time as decimal hour, e.g. `14.5` = 14:30.                                     |
+| HaulDur      | minutes          | Duration of the haul.                                                                     |
+| SweptArea    | m²               | Estimated swept area of the haul.                                                         |
+| LengthGroup  | cm               | Fish length interval, e.g. `(20-25]` cm.                                                  |
+| HaulN        | number           | Number of fish observed in the haul and length group.                                     |
+| HaulWgt      | g                | Total weight of fish observed in the haul and length group.                               |
 
 
 ## Assumptions

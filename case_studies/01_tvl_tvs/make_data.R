@@ -119,3 +119,19 @@ saveRDS(hh, file = "01_tvl_tvs.rds", compress = "xz")
 
 ## qs::qsave(hh, "01_tvl_tvs.qs")
 ## hh <- qs::qread("01_tvl_tvs.qs")
+
+
+## for readme
+
+dat
+
+vars <- colnames(hh)
+for(i in seq_along(vars)){
+  if (i == 1) {
+    cat("| Variable | Unit | Description |\n")
+    cat("|----------|------|-------------|\n")
+  }
+  cat("|", vars[i], "| | |\n")
+}
+
+head(hh, 10)

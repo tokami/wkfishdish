@@ -1,5 +1,10 @@
 # Gear efficiency: TVL vs. TVS for plaice in the Baltic
 
+**Author:** Tobias Mildenberger and Casper Berg
+**Email:** tobm@dtu.dk and cbe@dtu.dk
+**Version:** 1.0
+**Last updated:** 2026-06-06
+
 
 ## Methodological challenge
 
@@ -24,20 +29,21 @@ should account for? This data set could serve as an exploration of this
 question. Specific questions could be:
 
 * How does the catch efficiency differ among TVL and TVS?
-* Can the gear efficiency be estimated reliably?
-* Does it differ by length?
+* When can gear efficiency be estimated reliably?
+* When do gear estimates reflect spatial differences and when gear efficiencies?
+* Does gear efficiency differ by length?
 
 
 ## Data sources
 
-* Source: ICES DATRAS
-* Survey type: BITS (Baltic International Trawl Survey)
-* Years: 1999–2024
-* Taxonomic scope: (Pleuronectes platessa)
-* Response variables:
+* **Source:** ICES DATRAS
+* **Survey type:** Baltic International Trawl Survey (BITS)
+* **Years:** 1999–2024
+* **Taxonomic scope:** Plaice (Pleuronectes platessa)
+* **Response variables:**
 
-  * Numbers-at-length
-  * Weight-at-length
+  * Numbers-at-length per haul
+  * Weight-at-length per haul
 
 
 ## Key variables

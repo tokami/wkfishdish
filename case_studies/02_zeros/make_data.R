@@ -1,5 +1,5 @@
 #####################
-## Case study 01: What is the relationship between TVL and TVS gears?
+## Case study 02: Does omitting zeros lead to better models?
 #####################
 
 ## Tobias Mildenberger <tobm@dtu.dk> and Casper Berg <cbe@dtu.dk>
@@ -17,15 +17,15 @@ dir.create(fig_dir)
 
 
 ## years
-years <- 1999:2024
+years <- 2000:2024
 
 
 ## surveys with beam trawl gears
-surveys <- c("BITS")
+surveys <- c("NS-IBTS")
 
 
 ## beam trawls
-gears <- c("TVS", "TVL")
+gears <- c("GOV")
 
 
 ## download / read-in data
@@ -39,26 +39,8 @@ table(dat0$Gear, dat0$Year)
 dat <- subset(dat0, Gear %in% gears)
 
 
-## some plots
-png(file.path(fig_dir, "fig01.png"),
-    width = 1100, height = 900, res = 120, bg = "white")
-plot_datras_overview(dat,
-                     by_gear = TRUE,
-                     multi_panels = TRUE)
-dev.off()
-
-png(file.path(fig_dir, "fig02.png"),
-    width = 1100, height = 900, res = 120, bg = "white")
-plot_datras_overview(dat,
-                     metric = "count_hauls",
-                     mode = "grid",
-                     by_gear = TRUE,
-                     multi_panels = TRUE)
-dev.off()
-
-
-## select plaice
-dat <- subset(dat, Valid_Aphia == "127143") ## Pleuronectes platessa
+## select wolffish
+dat <- subset(dat, Valid_Aphia == "126758") ## Anarhichas lupus
 
 
 ## prune
@@ -84,23 +66,34 @@ plot_length_distribution(dat)
 dat <- add_weight_at_length(dat, lookup_as_backup = TRUE)
 
 
-## define custom length cuts
-length_cuts <- c(0,10,15,20,25,35,Inf)
+## add total numbers and weight by haul
+dat <- add_total_numbers_by_haul(dat)
+dat <- add_total_weight_by_haul(dat)
 
-
-## add total numbers and weight by haul for custom length cuts
-dat <- add_total_numbers_by_haul(dat, length_cuts = length_cuts)
-dat <- add_total_weight_by_haul(dat, length_cuts = length_cuts)
-
-png(file.path(fig_dir, "fig03.png"),
-    width = 1000, height = 1300, res = 120, bg = "white")
+png(file.path(fig_dir, "fig01.png"),
+    width = 1400, height = 1500, res = 120, bg = "white")
 plot_datras_overview(dat,
+                     mode = "grid",
                      metric = "mean",
                      value_var = "HaulN",
-                     by_gear = TRUE,
-                     panel_layout = "horizontal",
-                     fixed_scale = TRUE,
-                     positive_only = TRUE)
+                     by_year = TRUE,
+                     multi_panels = TRUE,
+                     xlim = c(-5, 15),
+                     ylim = c(49, 62))
+dev.off()
+
+
+png(file.path(fig_dir, "fig02.png"),
+    width = 1400, height = 1500, res = 120, bg = "white")
+plot_datras_overview(dat,
+                     mode = "grid",
+                     metric = "mean",
+                     value_var = "HaulN",
+                     by_year = TRUE,
+                     positive_only = TRUE,
+                     multi_panels = TRUE,
+                     xlim = c(-5, 15),
+                     ylim = c(49, 62))
 dev.off()
 
 
@@ -115,10 +108,8 @@ hh$lon <- round(hh$lon, 3)
 
 utils::object.size(hh) / 1e3
 
-saveRDS(hh, file = "01_tvl_tvs.rds", compress = "xz")
+saveRDS(hh, file = "02_zeros.rds", compress = "xz")
 
-## qs::qsave(hh, "01_tvl_tvs.qs")
-## hh <- qs::qread("01_tvl_tvs.qs")
 
 
 ## for readme

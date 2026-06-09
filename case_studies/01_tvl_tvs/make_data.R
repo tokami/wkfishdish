@@ -2,7 +2,7 @@
 ## Case study 01: What is the relationship between TVL and TVS gears?
 #####################
 
-## Tobias Mildenberger <tobm@dtu.dk> and Casper Berg <cbe@dtu.dk>
+## Tobias Mildenberger <tobm@dtu.dk> and Casper Berg <cabe@dtu.dk>
 ## June 2026
 
 

@@ -1,12 +1,12 @@
 # Unnecessary zeros: Can we remove zeros without losing information?
 
 
-| Field | Value |
-|--------|--------|
-| Author | Tobias Mildenberger and Casper Berg |
-| Email | tobm@dtu.dk and cbe@dtu.dk |
-| Version | 1.0 |
-| Last updated | 2026-06-06 |
+| Field        | Value                               |
+|--------------|-------------------------------------|
+| Author       | Tobias Mildenberger and Casper Berg |
+| Email        | tobm@dtu.dk and cabe@dtu.dk         |
+| Version      | 1.0                                 |
+| Last updated | 2026-06-06                          |
 
 
 

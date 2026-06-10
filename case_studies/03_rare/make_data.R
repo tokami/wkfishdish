@@ -2,7 +2,7 @@
 ## Case study 03: Modelling rare but widespread species
 #####################
 
-## Tobias Mildenberger <tobm@dtu.dk> and Casper Berg <cbe@dtu.dk>
+## Tobias Mildenberger <tobm@dtu.dk> and Casper Berg <cabe@dtu.dk>
 ## June 2026
 
 

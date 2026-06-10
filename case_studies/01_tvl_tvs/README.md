@@ -17,7 +17,6 @@ indices, species distribution models, and trend analyses.
 In this dataset, all observations originate from the same survey but two
 different gears: a large TV trawl (TVL) and a small TV trawl (TVS) (Fig. 1).
 
-
 ![Figure 1. Distribution of hauls for the two gears.](figs/fig01.png)
 
 The spatial distribution of the numbers of hauls by gear is shown in Fig. 2.

@@ -39,8 +39,8 @@ table(dat0$Gear, dat0$Year)
 dat <- subset(dat0, Gear %in% gears)
 
 
-## select wolffish
-dat <- subset(dat, Valid_Aphia == "127427") ## "127149") ## "127150") ## Zeus faber
+## select john dory
+dat <- subset(dat, Valid_Aphia == "127427") ## Zeus faber
 
 
 ## prune

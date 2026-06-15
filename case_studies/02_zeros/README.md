@@ -5,8 +5,8 @@
 |--------------|-------------------------------------|
 | Author       | Tobias Mildenberger and Casper Berg |
 | Email        | tobm@dtu.dk and cabe@dtu.dk         |
-| Version      | 1.0                                 |
-| Last updated | 2026-06-06                          |
+| Version      | 2.0                                 |
+| Last updated | 2026-06-14                          |
 
 
 
@@ -86,6 +86,10 @@ distribution and potential habitat (Figure 2).
 | HaulN        | number           | Number of Atlantic wolffish caught in the haul.                      |
 | HaulWgt      | g                | Total weight of Atlantic wolffish caught in the haul.                |
 
+Detailed information about many of these columns can also be downloaded as an
+excel table from the [ICES
+webpage](https://www.ices.dk/data/Documents/DATRAS/DATRAS_Field_descriptions_and_example_file_December2025.xlsx).
+
 
 ## Assumptions
 
@@ -98,6 +102,3 @@ distribution and potential habitat (Figure 2).
    habitat rather than temporary absences.
 5. The period 2000–2024 adequately captures the contemporary distribution of
    Atlantic wolffish in the North Sea.
-
-Consider whether these assumptions are reasonable and how violations might
-affect conclusions regarding the treatment of zero observations.

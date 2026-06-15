@@ -5,8 +5,8 @@
 |--------------|-------------------------------------|
 | Author       | Tobias Mildenberger and Casper Berg |
 | Email        | tobm@dtu.dk and cabe@dtu.dk         |
-| Version      | 1.0                                 |
-| Last updated | 2026-06-06                          |
+| Version      | 2.0                                 |
+| Last updated | 2026-06-14                          |
 
 
 
@@ -88,6 +88,10 @@ year.](figs/fig03.png)
 | HaulN | number | Number of John Dory caught in the haul. |
 | HaulWgt | g | Total weight of John Dory caught in the haul. |
 
+Detailed information about many of these columns can also be downloaded as an
+excel table from the [ICES
+webpage](https://www.ices.dk/data/Documents/DATRAS/DATRAS_Field_descriptions_and_example_file_December2025.xlsx).
+
 
 ## Assumptions
 
@@ -100,7 +104,3 @@ year.](figs/fig03.png)
    unsuitable habitat.
 5. The observed spatial distribution is representative of the species'
    underlying distribution during the study period.
-
-
-Consider whether these assumptions are reasonable and how violations might
-affect conclusions regarding the treatment of zero observations.

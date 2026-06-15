@@ -4,8 +4,8 @@
 |--------------|-------------------------------------|
 | Author       | Tobias Mildenberger and Casper Berg |
 | Email        | tobm@dtu.dk and cabe@dtu.dk         |
-| Version      | 1.0                                 |
-| Last updated | 2026-06-06                          |
+| Version      | 2.0                                 |
+| Last updated | 2026-06-14                          |
 
 
 ## Methodological challenge
@@ -72,6 +72,10 @@ question. Specific questions could be:
 | HaulN        | number           | Number of fish observed in the haul and length group.                                     |
 | HaulWgt      | g                | Total weight of fish observed in the haul and length group.                               |
 
+Detailed information about many of these columns can also be downloaded as an
+excel table from the [ICES
+webpage](https://www.ices.dk/data/Documents/DATRAS/DATRAS_Field_descriptions_and_example_file_December2025.xlsx).
+
 
 ## Assumptions
 
@@ -80,8 +84,6 @@ question. Specific questions could be:
 4. Environmental effects are either negligible or can be modelled separately.
 5. Differences among gears reflect differences in catchability rather than stock
    abundance.
-
-Please critically evaluate whether these assumptions are reasonable.
 
 
 ![Figure 3. Number of individuals by length and gear](figs/fig03.png)

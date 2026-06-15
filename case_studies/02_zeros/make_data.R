@@ -7,7 +7,7 @@
 
 
 ## remotes::install_github("tokami/DATRASextra@dev")
-require(DATRASextra)
+require(DATRASextra) ## v0.2.0
 
 
 ## specify data path
@@ -29,9 +29,13 @@ gears <- c("GOV")
 
 
 ## download / read-in data
-dat0 <- download_datras(surveys = surveys,
-                        years = years,
-                        dir = data_dir)
+## dat0 <- download_datras(surveys = surveys,
+##                         years = years,
+##                         path = data_dir)
+
+dat0 <- read_datras(path = data_dir,
+                    surveys = surveys,
+                    years = years)
 
 
 ## keep only the two gears
